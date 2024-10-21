@@ -1,0 +1,158 @@
+﻿@page
+@model Caltec.StudentInfoProject.WebUi.Pages.Students.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Student.FirstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Student.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Student.LastName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Student.LastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Student.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Student.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Student.Phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Student.Phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Student.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Student.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Student.City)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Student.City)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Student.State)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Student.State)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Student.Zip)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Student.Zip)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Student.Country)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Student.Country)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Student.ClassName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Student.ClassName)
+        </dd>
+    </dl>
+    <dl class="row">
+        <h2>Schools Fees</h2>
+        <p>
+            <a asp-page="./SchoolFees/Create" asp-route-id="@Model.Student.Id">Create New School fees</a>
+        </p>
+    </dl>
+    <dl class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SchoolFees[0].Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SchoolFees[0].ClassName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SchoolFees[0].Amount)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SchoolFees[0].PaymentDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SchoolFees[0].PaymentMethod)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SchoolFees[0].PaymentReference)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SchoolFees[0].PaymentNote)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SchoolFees[0].PaymentStatus)
+                    </th>
+                    <th>
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.SchoolFees)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ClassName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Amount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PaymentDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PaymentMethod)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PaymentReference)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PaymentNote)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PaymentStatus)
+                        </td>
+                        <td>
+                            <a asp-page="./SchoolFees/Edit" asp-route-id="@item.Id">Edit</a>
+                            <a asp-page="./SchoolFees/Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </dl>
+</div>
+
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Student?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

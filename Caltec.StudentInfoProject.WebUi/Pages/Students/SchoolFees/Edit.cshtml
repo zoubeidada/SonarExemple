@@ -1,0 +1,78 @@
+﻿@page
+@model Caltec.StudentInfoProject.WebUi.Pages.Students.SchoolFees.EditModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+<h1>Edit School Fee</h1>
+
+<hr />
+<p>
+    Edit School Fees for @Model.Student.FirstName @Model.Student.LastName
+</p>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SchoolFees.Amount" class="control-label"></label>
+                <input asp-for="SchoolFees.Amount" class="form-control" />
+                <span asp-validation-for="SchoolFees.Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SchoolFees.PaymentDate" class="control-label"></label>
+                <input asp-for="SchoolFees.PaymentDate" class="form-control" />
+                <span asp-validation-for="SchoolFees.PaymentDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <label asp-for="SchoolFees.PaymentMethod" class="control-label"></label>
+                    <select id="drpEmpListMethod" class="form-control" asp-for="SchoolFees.PaymentMethod" asp-items="@(new SelectList(Model.PaymentMethodsList))">
+                        <option value="">--Select--</option>
+                    </select>
+
+                </div>
+                <span asp-validation-for="SchoolFees.PaymentMethod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SchoolFees.PaymentReference" class="control-label"></label>
+                <input asp-for="SchoolFees.PaymentReference" class="form-control" />
+                <span asp-validation-for="SchoolFees.PaymentReference" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <label asp-for="SchoolFees.PaymentStatus" class="control-label"></label>
+                    <select id="drpEmpListStatus" class="form-control" asp-for="SchoolFees.PaymentStatus" asp-items="@(new SelectList(Model.PaymentStatusList))">
+                        <option value="">--Select--</option>
+                    </select>
+
+                </div>
+                <span asp-validation-for="SchoolFees.PaymentStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SchoolFees.PaymentNote" class="control-label"></label>
+                <input asp-for="SchoolFees.PaymentNote" class="form-control" />
+                <span asp-validation-for="SchoolFees.PaymentNote" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SchoolFees.ClassName" class="control-label"></label>
+                <select id="drpEmpListClass" class="form-control" asp-for="SchoolFees.ClassId" asp-items="@(new SelectList(Model.StudentClasses, "Value", "Text"))">
+                    <option value="">--Select--</option>
+                </select>
+                <input type="hidden" asp-for="SchoolFees.ClassId" />
+                <input type="hidden" asp-for="SchoolFees.Id" />
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Edit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="/Students/Details" asp-route-id="@Model.Student.Id">Back to Student details</a>
+</div>

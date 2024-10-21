@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caltec.StudentInfoProject.WebUi", "Caltec.StudentInfoProject.WebUi\Caltec.StudentInfoProject.WebUi.csproj", "{C4897627-C992-4521-828E-5AC5C6FEFFC5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caltec.StudentInfoProject.Domain", "Caltec.StudentInfoProject.Domain\Caltec.StudentInfoProject.Domain.csproj", "{0B13F608-A303-4B97-99CA-EF442F7E3F3B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caltec.StudentInfoProject.Business", "Caltec.StudentInfoProject.Business\Caltec.StudentInfoProject.Business.csproj", "{B797F040-893A-4D02-B670-67507A181DC0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caltec.StudentInfoProject.Persistence", "Caltec.StudentInfoProject.Persistence\Caltec.StudentInfoProject.Persistence.csproj", "{F965BB39-2CC7-43F2-B519-BC377E66FDDA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caltec.StudentInfoProject.Common", "Caltec.StudentInfoProject.Common\Caltec.StudentInfoProject.Common.csproj", "{D026699D-E9F2-46B3-8C9E-F1A61C279AFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caltec.StudentInfoProject.Business.Tests", "Caltec.StudentInfoProject.Business.Tests\Caltec.StudentInfoProject.Business.Tests.csproj", "{7523677A-398D-42F3-BCEA-9779878B2F60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4897627-C992-4521-828E-5AC5C6FEFFC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4897627-C992-4521-828E-5AC5C6FEFFC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4897627-C992-4521-828E-5AC5C6FEFFC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4897627-C992-4521-828E-5AC5C6FEFFC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B13F608-A303-4B97-99CA-EF442F7E3F3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B13F608-A303-4B97-99CA-EF442F7E3F3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B13F608-A303-4B97-99CA-EF442F7E3F3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B13F608-A303-4B97-99CA-EF442F7E3F3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B797F040-893A-4D02-B670-67507A181DC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B797F040-893A-4D02-B670-67507A181DC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B797F040-893A-4D02-B670-67507A181DC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B797F040-893A-4D02-B670-67507A181DC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F965BB39-2CC7-43F2-B519-BC377E66FDDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F965BB39-2CC7-43F2-B519-BC377E66FDDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F965BB39-2CC7-43F2-B519-BC377E66FDDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F965BB39-2CC7-43F2-B519-BC377E66FDDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D026699D-E9F2-46B3-8C9E-F1A61C279AFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D026699D-E9F2-46B3-8C9E-F1A61C279AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D026699D-E9F2-46B3-8C9E-F1A61C279AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D026699D-E9F2-46B3-8C9E-F1A61C279AFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7523677A-398D-42F3-BCEA-9779878B2F60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7523677A-398D-42F3-BCEA-9779878B2F60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7523677A-398D-42F3-BCEA-9779878B2F60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7523677A-398D-42F3-BCEA-9779878B2F60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBB8B62E-64AB-413B-9323-6C5FFCA8BE20}
+	EndGlobalSection
+EndGlobal

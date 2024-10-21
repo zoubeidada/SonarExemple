@@ -1,0 +1,55 @@
+﻿@page
+@model Caltec.StudentInfoProject.WebUi.Pages.Degrees.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>List of Degrees</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Degree[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Degree[0].NbYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Degree[0].FeesPerYearPerStudent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Degree[0].NbPayment)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Degree) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NbYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeesPerYearPerStudent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NbPayment)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
